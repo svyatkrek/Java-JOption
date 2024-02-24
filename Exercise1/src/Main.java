@@ -14,7 +14,7 @@ class Main{
             //
             //
             layout = new JFrame();
-            layout.setTitle("Task Synchronization ");
+            layout.setTitle("First exercise");
             layout.setBounds(100, 100, 800, 600);
             layout.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             layout.getContentPane().setLayout(null);
