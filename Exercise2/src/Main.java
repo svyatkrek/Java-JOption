@@ -14,13 +14,13 @@ class Main{
             //
             //
             layout = new JFrame();
-            layout.setTitle("First exercise");
+            layout.setTitle("Window");
             layout.setBounds(100, 100, 800, 600);
             layout.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             layout.getContentPane().setLayout(null);
             //
             //
-            displayMessage = new JButton("Открыть диалоговое окно");
+            displayMessage = new JButton("Ввести имя");
             layout.getContentPane().add(displayMessage);
             //
             //
@@ -29,7 +29,13 @@ class Main{
             layout.getContentPane().add(buttonsPanel);
             buttonsPanel.add(displayMessage);
 
-            displayMessage.addActionListener(e -> JOptionPane.showMessageDialog(layout, "Марк"));
+            displayMessage.addActionListener(e -> {
+                String name = JOptionPane.showInputDialog(layout, "Введите имя:");
+                if (name.isEmpty())
+                    JOptionPane.showMessageDialog(layout, "Вы ничего не ввели :c");
+                else
+                    JOptionPane.showMessageDialog(layout, name);
+            });
         }
     }
 
